@@ -1,17 +1,11 @@
 import React from 'react'
 
-const Home = () => {
+const Home = ({ history }) => {
     return (
         <div>
-            <h1>You are logged in </h1>
+            <h1>You can login here</h1>
+            <button onClick={() => {history.push('/login')}}>Login</button>
         </div>
     )
 }
- {/*<BrowserRouter>
-            <Switch>
-                {user ? Route exact component={home} path="/"/> : <Route component={please} path="/login"/> 
-                }
-            </Switch>
-    </BrowserRouter>*/}
-
 export default Home

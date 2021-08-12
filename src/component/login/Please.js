@@ -38,15 +38,6 @@ const Please = (props) => {
             setEmail(e.target.value);
           }}
         />
-
-
-        <div onClick={hidePass} className="icon">
-        <i class="fas fa-eye-slash"></i>
-        </div>
-        <div onClick={hidePass} className="icon">
-          <i class="fas fa-eye"></i>
-        </div>
-
         <p class="errorMsg">{emailError}</p>
         <label>Password</label>
         <input
@@ -62,7 +53,7 @@ const Please = (props) => {
         <div className="btnContainer">
           {hasAccount ? (
             <>
-              <button onClick={handleLogin}>Sign in</button>
+              <button className="btn-login" onClick={handleLogin}>Sign in</button>
               <p>
                 Dont have an account?{" "}
                 <span onClick={() => setHasAccount(!hasAccount)}>
@@ -73,7 +64,7 @@ const Please = (props) => {
             </>
           ) : (
             <>
-              <button onClick={handleSignup}>Sign up</button>
+              <button className="btn-login" onClick={handleSignup}>Sign up</button>
               <p>
                 Have an account?{" "}
                 <span onClick={() => setHasAccount(!hasAccount)}>
