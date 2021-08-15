@@ -24,7 +24,8 @@ const Please = (props) => {
   const [ema, setEma] = useState("");
   const [url, setUrl] = useState("");
 
- 
+  const fuckOff = "fuck-off"
+
   const responseGoogle = (response) => {
     setName(response.profileObj.name);
     setEma(response.profileObj.ema);
